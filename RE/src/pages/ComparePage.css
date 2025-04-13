@@ -1,0 +1,133 @@
+/* 🌟 Full-page comparison layout */
+.compare-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #f4f6f8;
+}
+
+/* 🚀 Header Section */
+.compare-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header-title {
+  font-family: "Poppins, sans-serif";
+  color: #1565c0;
+}
+
+/* 🌟 Selected Property Highlight */
+.selected-property {
+  border: 3px solid gold; /* Distinct green border */
+  box-shadow: 0 0 20px rgb(255, 215, 0); /* Green glow */
+  background-color: #f1fdf3; /* Light green background for pop */
+  transform: scale(1.03); /* Slightly enlarged */
+  z-index: 10; /* Bring to front */
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* 📋 Comparison Grid */
+.compare-row {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+/* 📌 Property Cards */
+.property-card {
+  width: 100%;
+  max-width: 420px;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 🔥 Hover Effect */
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 🏆 Recommended Property */
+.best-property {
+  border: 3px solid #ff9800;
+  background: #fff3e0;
+}
+
+/* 🖼️ Property Images */
+.property-image {
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* 📌 Icons */
+.icon {
+  margin-right: 6px;
+  color: #1890ff;
+}
+
+/* 💰 Price Styling */
+.price {
+  font-size: 18px;
+  color: #ff5722;
+}
+
+/* 🏆 AI Score Section */
+.ai-score {
+  margin-top: 10px;
+}
+
+/* ✨ Property Content */
+.property-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* 🔍 AI Insights */
+.ai-insights {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+  background: #f9f9f9;
+  border-radius: 4px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+/* 🌀 Loading State */
+.loading-container {
+  background-color: #fff; /* White Background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 📌 Adjustments for Mobile */
+@media (max-width: 768px) {
+  .property-card {
+    min-height: 600px;
+  }
+}

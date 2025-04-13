@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Full-Screen Background */
+.about-us {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?w=1600") center/cover no-repeat;
+}
+
+.about-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.about-us * {
+  position: relative;
+  z-index: 2;
+}
+
+h1, h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 1.5rem;
+}
+
+/* Why Choose Us */
+.why-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.why-item {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 17px;
+  max-width: 250px;
+}
+
+/* Services */
+.services-grid {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+/* Team Section */
+.team-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  flex: 1;
+  max-width: 300px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+/* Testimonials */
+.testimonials {
+  margin-top: 50px;
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.testimonial h4 {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-container {
+    flex-wrap: wrap;
+  }
+
+  .team-member {
+    flex: 1 1 100%;
+  }
+}

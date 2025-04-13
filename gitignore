@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Build output
+dist/
+.next/
+.cache/
+
+# OS/IDE related
+.DS_Store
+*.swp
+
+

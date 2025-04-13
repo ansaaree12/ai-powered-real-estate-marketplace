@@ -1,0 +1,19 @@
+.agent-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .agent-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .agent-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  

@@ -1,0 +1,80 @@
+/* Push the container below the header */
+.our-agents-container {
+    width: 100vw; /* Full viewport width */
+    max-width: 100%; /* Ensure it doesn’t shrink */
+    margin: 8px auto 20px; /* Adds space below the header */
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* Page heading */
+.our-agents-container h1 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 3px solid #0073e6;
+    padding-bottom: 10px;
+}
+
+/* Responsive agent grid */
+.agents-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Individual agent cards */
+.agent-card {
+    flex: 1 1 calc(30% - 20px); /* Three per row */
+    padding: 20px;
+    background: linear-gradient(to bottom right, #ffffff, #e6f7ff);
+    border: 1px solid #0073e6;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    margin-bottom: 1.5rem; /* Adds spacing between boxes */
+}
+
+.agent-card:hover {
+    transform: translateY(-5px);
+}
+
+.agent-card h3 {
+    font-size: 22px;
+    color: #0073e6;
+    margin-bottom: 0.5rem;
+}
+
+.agent-card p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .our-agents-container {
+        width: 95%;
+    }
+    
+    .agent-card {
+        flex: 1 1 calc(45% - 20px); /* 2 per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .our-agents-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .agent-card {
+        flex: 1 1 100%; /* 1 per row on small screens */
+    }
+}

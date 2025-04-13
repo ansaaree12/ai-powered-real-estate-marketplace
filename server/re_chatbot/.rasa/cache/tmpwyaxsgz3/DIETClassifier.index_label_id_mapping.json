@@ -1,0 +1,14 @@
+{
+  "0": "affirm",
+  "1": "bot_challenge",
+  "2": "deny",
+  "3": "goodbye",
+  "4": "greet",
+  "5": "inquire_properties",
+  "6": "mood_great",
+  "7": "mood_unhappy",
+  "8": "property_amenities",
+  "9": "property_location",
+  "10": "property_price",
+  "11": "search_properties"
+}

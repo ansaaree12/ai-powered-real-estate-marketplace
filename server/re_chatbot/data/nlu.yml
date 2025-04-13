@@ -1,0 +1,170 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - hey there
+      - let's go
+      - hey dude
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you later
+      - take care
+      - have a nice day
+      - bye bye
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - super stoked
+      - extremely good
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - unhappy
+      - not good
+      - extremely sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  # ✅ Property Inquiry Intent
+  - intent: inquire_properties
+    examples: |
+      - Show me properties under ₹10 crore
+      - List properties above ₹5 crore
+      - I want a villa between ₹2.5 crore and ₹8 crore
+      - Do you have apartments in South Mumbai under ₹4 crore?
+      - Show me flats between ₹2.5 crore and ₹8 crore
+      - Any rental apartments in Bandra below ₹5 crore?
+      - Find me a commercial property in Mumbai Suburban
+      - Do you have penthouses for ₹6 crore?
+      - Show me bungalows in South Mumbai
+      - Are there any luxury properties in Cumballa Hill?
+
+  # ✅ Property Search Intent
+  - intent: search_properties
+    examples: |
+      - Show me properties in Worli
+      - I am looking for a bungalow in Colaba
+      - Any villas available in Mumbai Suburban?
+      - Can you find me a 3BHK in Santacruz?
+      - I need an apartment in Andheri
+      - List some properties in Byculla
+      - Find me luxury apartments in Borivali
+      - Show me affordable flats in Wadala
+      - Find me sea-facing properties in Cumballa Hill
+
+  # ✅ Property Price Inquiry Intent
+  - intent: property_price
+    examples: |
+      - What is the price range for villas in Colaba?
+      - How much does a luxury apartment in Byculla cost?
+
+  # ✅ Property Amenities Inquiry Intent
+  - intent: property_amenities
+    examples: |
+      - Do these apartments have a swimming pool?
+      - Are there any gyms in these buildings?
+      - Do these properties have a garden?
+      - I want a flat with a gym and swimming pool
+      - Do the villas come with parking?
+      - Are there kids' play areas in these properties?
+
+  # ✅ Property Location Intent
+  - intent: best_villa_areas
+    examples: |
+      - What are the best areas to buy a villa in Mumbai?
+      - Where should I invest in a villa in Mumbai?
+      - Best places to buy a villa?
+
+  - intent: south_mumbai_neighborhoods
+    examples: |
+      - Tell me about the neighborhoods in South Mumbai
+      - What are the best areas in South Mumbai?
+      - Which is the best locality in South Mumbai?
+
+  - intent: andheri_living
+    examples: |
+      - Is Andheri a good area to live in?
+      - How is living in Andheri?
+      - Should I buy a house in Andheri?
+
+  - intent: sea_view_areas
+    examples: |
+      - Which localities have sea-view apartments?
+      - Where can I buy a sea-facing apartment in Mumbai?
+      - Show me properties with a sea view.
+
+  - intent: real_estate_hotspots
+    examples: |
+      - Can you suggest some upcoming real estate hotspots in Mumbai?
+      - What are the trending areas for real estate investment?
+      - Which areas are developing in Mumbai?
+
+  - intent: commercial_dadar
+    examples: |
+      - Are there any commercial properties in Dadar?
+      - Show me commercial buildings in Dadar.
+      - Any office spaces in Dadar?
+
+  # ✅ Virtual Tour Intent
+  - intent: virtual_tour_request
+    examples: |
+      - Can I see the 3D tour of this property?
+      - Does this listing have a virtual tour?
+      - I want to explore the property virtually
+      - Show me the virtual tour for this flat
+      - Is there a 3D walkthrough?
+      
+  - intent: legal_paperwork
+    examples: |
+      - What are the legal documents needed to buy a house?
+      - Tell me about the property paperwork
+      - Do I need any documents to buy a flat?
+      - What is the legal procedure to purchase property?
+      - What kind of paperwork is required when buying land?
+      - Do I need to register my property?
+      - Is a lawyer required for property registration?
+      - Tell me about the legal process for buying a home

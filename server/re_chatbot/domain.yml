@@ -1,0 +1,122 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - search_properties
+  - property_price
+  - property_amenities
+  - inquire_properties
+  - best_villa_areas
+  - south_mumbai_neighborhoods
+  - andheri_living
+  - sea_view_areas
+  - real_estate_hotspots
+  - commercial_dadar
+  - virtual_tour_request
+  - property_location
+  - legal_paperwork
+   
+
+responses:
+  utter_greet:
+    - text: "Hey! How can I assist you today?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great! Let me know if you need anything else."
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day."
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  # ✅ Property Search Response
+  utter_search_properties:
+    - text: "I can help you find properties in Mumbai. Could you specify your budget, property type, and location?"
+
+  # ✅ Property Price Inquiry Response
+  utter_property_price:
+    - text: "Prices vary based on location and amenities. Do you have a specific budget or area in mind?"
+
+  # ✅ Property Amenities Inquiry Response
+  utter_property_amenities:
+    - text: "Properties may include amenities like pools, gyms, and gardens. Let me know what features you're looking for."
+
+  # ✅ New Responses for Specific Queries
+  utter_best_villa_areas:
+    - text: |
+        The best areas to buy a villa in Mumbai based on our listings are:
+        ✅ Altamount Road, Cumballa Hills – ₹2.75 Cr  
+        ✅ SV Patel Nagar, Andheri West – ₹25.00 Cr  
+        ✅ Colaba East – ₹17.50 Cr  
+        These locations offer spacious villas with amenities like pools, gardens, and ample parking. Let me know if you need more details!
+
+  utter_south_mumbai_neighborhoods:
+    - text: |
+        South Mumbai is known for its premium real estate, luxury apartments, and sea-view properties.  
+        🏙 Worli – Home to high-end projects like Lodha Maison (₹5.20 Cr) and Omkar 1973 (₹1.43 Cr).  
+        🏙 Colaba – Famous for sea-facing bungalows like Villar Ville (₹17.50 Cr).  
+        🏙 Parel & Byculla – Premium apartments like Crescent Bay (₹4.10 Cr) and Piramal Aranya (₹4.13 Cr).  
+        Would you like me to find properties in a specific neighborhood?
+
+  utter_andheri_living:
+    - text: |
+        Andheri is one of the most sought-after residential areas in Mumbai, offering a mix of premium and budget-friendly properties.  
+        🏡 Lokhandwala, Andheri – Apartments like Bharat Altavistas (₹65.90 Lakh) with a swimming pool.  
+        🏡 SV Patel Nagar, Andheri West – Spacious villas like Rita Villa (₹25.00 Cr) with a private pool.  
+        Would you like to explore available listings in Andheri?
+
+  utter_sea_view_areas:
+    - text: |
+        Based on our listings, here are some sea-view localities:
+        🌊 Colaba East – Villar Ville (₹17.50 Cr), a luxury bungalow with a pool.  
+        🌊 Breach Candy, Cumballa Hill – Waves Bungalow (₹27.00 Cr) with a garden.  
+        🌊 Worli & Lower Parel – Premium apartments like Lodha The World Towers (₹1.40 Cr).  
+        Would you like me to find a property in a specific budget range?
+
+  utter_real_estate_hotspots:
+    - text: |
+        Based on recent trends, some upcoming real estate hotspots in Mumbai are:
+        🚀 Byculla – Premium projects like Piramal Aranya (₹4.13 Cr) and Marathon Monte South (₹7.27 Cr).  
+        🚀 Mahalaxmi – New luxury residences like Lodha Bellevue (₹10.48 Lakh).  
+        🚀 Santacruz West – Mid-luxury apartments like Kalpataru Imperia (₹6.00 Cr) with a gym.  
+        Would you like to explore properties in any of these areas?
+
+  utter_no_commercial_dadar:
+    - text: |
+        Currently, we don't have commercial properties in Dadar, but I can help you find residential properties there.  
+        For example, Suraj Park View (₹2.41 Cr) in Dadar has a swimming pool.  
+        Would you like to check premium residential options instead?
+
+  # ✅ Virtual Tour Response
+  utter_virtual_tour_request:
+    - text: | 
+        Absolutely! Every property listed on our platform includes a 3D virtual tour.  
+        👉 Just head over to the Properties tab and click on any property you're interested in — the virtual tour will be available there.
+
+
+
+  utter_legal_paperwork:
+    - text: |
+        The legal paperwork typically includes the sale deed, property tax receipts, encumbrance certificate, and government-approved ID proofs. It's also advised to consult a property lawyer to ensure everything is in order.
+
+
+actions:
+  - action_fetch_properties
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

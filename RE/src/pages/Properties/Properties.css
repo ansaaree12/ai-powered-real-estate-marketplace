@@ -1,0 +1,107 @@
+.properties-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.properties-container .search-bar {
+    display: flex;
+    align-items: center;
+    width: clamp(12rem, 100%, 28rem);
+    border-radius: 30px;
+    border: 1px solid rgba(120, 120, 120, 0.374);
+    flex-wrap: nowrap;
+    transition: all 300ms ease;
+}
+
+.properties-container .search-bar:hover {
+    background-color: rgba(72, 123, 255, 0.1);  /* Light blue hover background */
+    border-color: rgba(72, 123, 255, 0.7);  /* Blue border on hover */
+}
+
+.properties-container .search-bar .button {
+    border-radius: 30px;
+    font-size: 12px;
+    padding: 10px 15px;
+    background-color: #4066ff; /* Blue background */
+    color: white;
+    transition: all 200ms ease;
+}
+
+.properties-container .search-bar .button:hover {
+    background-color: #1e47b2;  /* Darker blue on hover */
+}
+
+.properties-container .search-bar input {
+    width: 70%;
+    transition: all 200ms ease;
+}
+
+.properties-container .filter-panel {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(72, 123, 255, 0.1); /* Light blue background */
+    padding: 0.5rem;
+    border-radius: 10px;
+    transition: all 200ms ease;
+}
+
+.properties-container .filter-panel:hover {
+    background-color: rgba(72, 123, 255, 0.2); /* Slightly darker on hover */
+}
+.properties {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 1rem; /* Reduce gap between rows */
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1400px; /* Keeps width consistent */
+    margin: auto;
+}
+/* Scoped to only the properties section */
+.properties-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Badge Styling */
+.property-motion-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  
+  /* Badge Container */
+  .property-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 10;
+  }
+  
+  /* Ant Badge Ribbon */
+  .property-badge .ant-badge-ribbon {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    z-index: 10;
+  }
+  
+  /* Badge Ribbon Text */
+  .property-badge .ant-badge-ribbon-text {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  
+  /* Wrapper */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }

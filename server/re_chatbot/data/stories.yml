@@ -1,0 +1,91 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: User searches for properties
+  steps:
+    - intent: search_properties
+    - action: action_fetch_properties
+
+- story: User inquires about property prices
+  steps:
+    - intent: property_price
+    - action: action_fetch_properties
+
+- story: User asks about property amenities
+  steps:
+    - intent: property_amenities
+    - action: action_fetch_properties
+
+- story: User asks about property locations
+  steps:
+    - intent: property_location
+    - action: action_fetch_properties
+
+- story: User asks about specific properties
+  steps:
+    - intent: inquire_properties
+    - action: action_fetch_properties
+
+- story: User asks for villa areas
+  steps:
+    - intent: best_villa_areas
+    - action: utter_best_villa_areas
+
+- story: User asks about South Mumbai
+  steps:
+    - intent: south_mumbai_neighborhoods
+    - action: utter_south_mumbai_neighborhoods
+
+- story: User asks about Andheri
+  steps:
+    - intent: andheri_living
+    - action: utter_andheri_living
+
+- story: User asks for sea view apartments
+  steps:
+    - intent: sea_view_areas
+    - action: utter_sea_view_areas
+
+- story: User asks for real estate hotspots
+  steps:
+    - intent: real_estate_hotspots
+    - action: utter_real_estate_hotspots
+
+- story: User asks for commercial properties in Dadar
+  steps:
+    - intent: commercial_dadar
+    - action: utter_no_commercial_dadar
+
+- story: User asks for a virtual tour
+  steps:
+    - intent: virtual_tour_request
+    - action: utter_virtual_tour_request
+

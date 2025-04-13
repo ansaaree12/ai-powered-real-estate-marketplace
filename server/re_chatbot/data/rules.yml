@@ -1,0 +1,49 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+    - intent: bot_challenge
+    - action: utter_iamabot
+
+- rule: Respond to property search queries
+  steps:
+    - intent: search_properties
+    - action: action_fetch_properties
+
+- rule: Respond to price inquiries
+  steps:
+    - intent: property_price
+    - action: action_fetch_properties
+
+- rule: Respond to amenities inquiries
+  steps:
+    - intent: property_amenities
+    - action: action_fetch_properties
+
+- rule: Respond to location inquiries
+  steps:
+    - intent: property_location
+    - action: action_fetch_properties
+
+- rule: Respond to specific property inquiries
+  steps:
+    - intent: inquire_properties
+    - action: action_fetch_properties
+
+- rule: Respond to virtual tour request
+  steps:
+    - intent: virtual_tour_request
+    - action: utter_virtual_tour_request
+
+- rule: Respond to legal paperwork questions
+  steps:
+    - intent: legal_paperwork
+    - action: utter_legal_paperwork
+

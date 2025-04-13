@@ -1,0 +1,9 @@
+config:
+  target: "http://localhost:8000"  # Match your server's port
+  phases:
+    - duration: 5         # Run test for 5 minutes
+      arrivalRate: 10             # Simulate 10 new users per second
+scenarios:
+  - flow:
+      - get:
+          url: "/api/residency/allresd"  # ✅ Correct endpoint for all residencies

@@ -1,0 +1,67 @@
+/* RE/src/virtualTour/VirtualTour.css */
+
+/* Overlay to darken the background when the virtual tour is displayed */
+.virtual-tour-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);  /* Dark semi-transparent background */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for the virtual tour iframe */
+.virtual-tour-container {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Close button to exit the virtual tour */
+.close-button {
+  position: absolute;
+  top: 525px;  /* Adjusted position to move the button lower */
+  right: 10px;  /* Slightly further from the edge */
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50%;  /* Ensures the button is a perfect circle */
+  z-index: 1;  /* Ensures the close button is always on top */
+  width: 40px;  /* Fixed size for circular button */
+  height: 40px;  /* Fixed size for circular button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Close button hover effect */
+.close-button:hover {
+  background-color: #ff4444;
+}
+
+/* Style for the iframe containing the virtual tour */
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .virtual-tour-container {
+    width: 90%;
+    height: 90%;
+  }
+}

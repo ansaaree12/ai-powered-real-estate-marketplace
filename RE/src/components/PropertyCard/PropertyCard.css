@@ -1,0 +1,105 @@
+.properties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem; /* Space between cards */
+  padding: 1rem;
+}
+
+.r-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem; /* Reduced internal spacing */
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: max-content;
+  margin: 0.5rem auto; /* Less vertical margin */
+  transition: all 300ms ease-in-out;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f3f8ff;
+  border: 1px solid rgba(72, 123, 255, 0.3);
+}
+
+
+/* Heart Icon - Positioned more inside */
+.heart-container {
+  position: absolute;
+  top: 20px; /* Moved further inside from the top */
+  right: 20px; /* Moved further inside from the right */
+  z-index: 3; /* Ensure it's above the image */
+}
+
+/* Property Image */
+.r-card > img {
+  width: 15rem;
+  height: 10rem;
+  border-radius: 10px;
+  transition: transform 300ms ease;
+}
+
+.r-card > :nth-child(3) {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.r-card > :nth-child(4) {
+  font-size: 1.5rem;
+  color: #071758; /* Blue color for title */
+}
+
+.r-card > :nth-child(5) {
+  font-size: 0.7rem;
+  width: 15rem;
+  color: #555; /* Gray for description text */
+  margin-bottom: 40px; /* Added more spacing to prevent overlap */
+}
+
+.r-card:hover {
+  scale: 1.05;
+  cursor: pointer;
+  background: linear-gradient(
+    180deg,
+    rgba(72, 123, 255, 0.3) 0%,
+    rgba(136, 160, 255, 0.46) 100%
+  );
+  box-shadow: 0px 72px 49px -51px rgba(136, 160, 255, 0.21);
+}
+
+.r-card:hover img {
+  transform: scale(1.05);
+}
+
+.r-card:hover > svg {
+  color: #4066ff; /* Highlight the heart icon on hover */
+}
+
+/* Select to Compare Checkbox - Bottom-Left Corner */
+.compare-checkbox-container {
+  position: absolute;
+  bottom: 10px; /* Ensures it doesn't overlap with the description */
+  left: 15px; /* Added proper spacing */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* More spacing between checkbox and label */
+  background: #4a90e2; /* Beautiful blue background */
+  padding: 10px 15px; /* More padding for better touch area */
+  border-radius: 8px; /* Softer edges */
+  z-index: 10;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.compare-checkbox-container input {
+  cursor: pointer;
+  width: 18px; /* Slightly larger */
+  height: 18px;
+}
+
+.compare-checkbox-container label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white; /* White text for contrast */
+  cursor: pointer;
+}
